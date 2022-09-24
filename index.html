@@ -201,7 +201,7 @@
         </div>
         <div class="row justify-content-center">
           <div class="col-md-6">
-            <form>
+            <form name="rhezadev-contact-form">
               <div class="mb-3">
                 <label for="name" class="form-label">Nama</label>
                 <input
@@ -209,6 +209,7 @@
                   class="form-control"
                   id="name"
                   aria-describedby="name"
+                  name="nama"
                 />
               </div>
               <div class="mb-3">
@@ -218,13 +219,45 @@
                   class="form-control"
                   id="email"
                   aria-describedby="email"
+                  name="email"
                 />
               </div>
               <div class="mb-3">
                 <label for="pesan" class="form-label">Pesan</label>
-                <textarea class="form-control" id="pesan" rows="3"></textarea>
+                <textarea
+                  class="form-control"
+                  id="pesan"
+                  rows="3"
+                  name="pesan"
+                ></textarea>
               </div>
-              <button type="submit" class="btn btn-primary mb-3">Kirim</button>
+              <button type="submit" class="btn btn-primary btn-kirim mb-3">
+                Kirim
+              </button>
+              <button
+                class="btn btn-primary btn-loading mb-3 d-none"
+                type="button"
+                disabled
+              >
+                <span
+                  class="spinner-grow spinner-grow-sm"
+                  role="status"
+                  aria-hidden="true"
+                ></span>
+                Loading...
+              </button>
+              <div
+                class="alert alert-success alert-dismissible fade show d-none"
+                role="alert"
+              >
+                <strong>Selamat!</strong> Pesan anda sudah kami terima. 🤝
+                <button
+                  type="button"
+                  class="btn-close"
+                  data-bs-dismiss="alert"
+                  aria-label="Close"
+                ></button>
+              </div>
             </form>
           </div>
         </div>
@@ -253,5 +286,34 @@
       integrity="sha384-u1OknCvxWvY5kfmNBILK2hRnQC3Pr17a+RTT6rIHI7NnikvbZlHgTPOOmMi466C8"
       crossorigin="anonymous"
     ></script>
+
+    <script>
+      const scriptURL =
+        "https://script.google.com/macros/s/AKfycbz3vyFrDc6jvfxNQuz9fUFd-VmPlZot7WVFMca1GFnhww8xwz-O3FSDFNLY0qwlknBA/exec";
+      const form = document.forms["rhezadev-contact-form"];
+      const btnKirim = document.querySelector(".btn-kirim");
+      const btnLoading = document.querySelector(".btn-loading");
+      const alert = document.querySelector(".alert");
+
+      form.addEventListener("submit", (e) => {
+        // ketika tombol submit diklik
+        // hilangkan tombol kirim, tampilkan tombol loading
+        e.preventDefault();
+        btnLoading.classList.toggle("d-none");
+        btnKirim.classList.toggle("d-none");
+        fetch(scriptURL, { method: "POST", body: new FormData(form) })
+          .then((response) => {
+            // hilangkan tombol kirim, tampilkan tombol loading
+            btnLoading.classList.toggle("d-none");
+            btnKirim.classList.toggle("d-none");
+            // tampilkan alert
+            alert.classList.toggle("d-none");
+            // reset form
+            form.reset();
+            console.log("Success!", response);
+          })
+          .catch((error) => console.error("Error!", error.message));
+      });
+    </script>
   </body>
 </html>
