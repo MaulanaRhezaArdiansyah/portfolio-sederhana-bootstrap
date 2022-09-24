@@ -19,6 +19,9 @@
       href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css"
     />
 
+    <!-- AOS -->
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+
     <!-- My CSS -->
     <link rel="stylesheet" href="style.css" />
   </head>
@@ -91,14 +94,24 @@
           </div>
         </div>
         <div class="row justify-content-center fs-5 text-center">
-          <div class="col-4">
+          <div
+            class="col-4"
+            data-aos="fade-right"
+            data-aos-delay="100"
+            data-aos-duration="1500"
+          >
             <p>
               Lorem, ipsum dolor sit amet consectetur adipisicing elit.
               Mollitia, quasi nemo quis suscipit nihil reprehenderit facilis
               corrupti ipsa qui fuga.
             </p>
           </div>
-          <div class="col-4">
+          <div
+            class="col-4"
+            data-aos="fade-left"
+            data-aos-delay="100"
+            data-aos-duration="1500"
+          >
             <p>
               Lorem ipsum dolor, sit amet consectetur adipisicing elit. Placeat
               reiciendis ratione, ad expedita eum dolore inventore ut vero,
@@ -127,7 +140,12 @@
         </div>
         <div class="row justify-content-center">
           <div class="col-md-4 mb-3">
-            <div class="card">
+            <div
+              class="card"
+              data-aos="flip-right"
+              data-aos-delay="100"
+              data-aos-duration="1500"
+            >
               <img src="img/card/1.jpg" class="card-img-top" alt="" />
               <div class="card-body">
                 <p class="card-text">
@@ -138,7 +156,12 @@
             </div>
           </div>
           <div class="col-md-4 mb-3">
-            <div class="card">
+            <div
+              class="card"
+              data-aos="flip-right"
+              data-aos-delay="200"
+              data-aos-duration="1500"
+            >
               <img src="img/card/2.jpg" class="card-img-top" alt="" />
               <div class="card-body">
                 <p class="card-text">
@@ -149,7 +172,12 @@
             </div>
           </div>
           <div class="col-md-4 mb-3">
-            <div class="card">
+            <div
+              class="card"
+              data-aos="flip-right"
+              data-aos-delay="300"
+              data-aos-duration="1500"
+            >
               <img src="img/card/3.jpg" class="card-img-top" alt="" />
               <div class="card-body">
                 <p class="card-text">
@@ -160,7 +188,12 @@
             </div>
           </div>
           <div class="col-md-4 mb-3">
-            <div class="card">
+            <div
+              class="card"
+              data-aos="flip-right"
+              data-aos-delay="400"
+              data-aos-duration="1500"
+            >
               <img src="img/card/4.jpg" class="card-img-top" alt="" />
               <div class="card-body">
                 <p class="card-text">
@@ -171,7 +204,12 @@
             </div>
           </div>
           <div class="col-md-4 mb-3">
-            <div class="card">
+            <div
+              class="card"
+              data-aos="flip-right"
+              data-aos-delay="500"
+              data-aos-duration="1500"
+            >
               <img src="img/card/5.jpg" class="card-img-top" alt="" />
               <div class="card-body">
                 <p class="card-text">
@@ -192,6 +230,91 @@
       </svg>
     </section>
     <!-- Akhir Project Section -->
+
+    <!-- Gallery Section -->
+    <section id="gallery">
+      <div class="container">
+        <div class="row text-center mb-3">
+          <div class="col">
+            <h2>Gallery</h2>
+          </div>
+        </div>
+
+        <div class="row justify-content-center">
+          <div class="col-md-3">
+            <img
+              src="img/gallery/1.jpg"
+              alt="Image-1"
+              class="img-fluid gallery-img"
+            />
+          </div>
+          <div class="col-md-3">
+            <img
+              src="img/gallery/2.jpg"
+              alt="Image-2"
+              class="img-fluid gallery-img"
+            />
+          </div>
+          <div class="col-md-3">
+            <img
+              src="img/gallery/3.jpg"
+              alt="Image-3"
+              class="img-fluid gallery-img"
+            />
+          </div>
+          <div class="col-md-3">
+            <img
+              src="img/gallery/4.jpg"
+              alt="Image-4"
+              class="img-fluid gallery-img"
+            />
+          </div>
+          <div class="col-md-3">
+            <img
+              src="img/gallery/5.jpg"
+              alt="Image-5"
+              class="img-fluid gallery-img"
+            />
+          </div>
+          <div class="col-md-3">
+            <img
+              src="img/gallery/6.jpg"
+              alt="Image-6"
+              class="img-fluid gallery-img"
+            />
+          </div>
+          <div class="col-md-3">
+            <img
+              src="img/gallery/7.jpg"
+              alt="Image-7"
+              class="img-fluid gallery-img"
+            />
+          </div>
+          <div class="col-md-3">
+            <img
+              src="img/gallery/8.jpg"
+              alt="Image-8"
+              class="img-fluid gallery-img"
+            />
+          </div>
+          <div class="col-md-3">
+            <img
+              src="img/gallery/9.jpg"
+              alt="Image-9"
+              class="img-fluid gallery-img"
+            />
+          </div>
+          <div class="col-md-3">
+            <img
+              src="img/gallery/10.jpg"
+              alt="Image-10"
+              class="img-fluid gallery-img"
+            />
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- Akhir Gallery Section -->
 
     <!-- Contact Section -->
     <section id="contact">
@@ -281,11 +404,28 @@
     </footer>
     <!-- Akhir Footer -->
 
+    <!-- Bootstrap -->
     <script
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js"
       integrity="sha384-u1OknCvxWvY5kfmNBILK2hRnQC3Pr17a+RTT6rIHI7NnikvbZlHgTPOOmMi466C8"
       crossorigin="anonymous"
     ></script>
+
+    <!-- AOS -->
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+      const galleryImage = document.querySelectorAll(".gallery-img");
+
+      galleryImage.forEach((img, i) => {
+        img.dataset.aos = "fade-down";
+        img.dataset.aosDelay = i * 100;
+        img.dataset.aosDuration = 1000;
+      });
+
+      AOS.init({
+        once: true,
+      });
+    </script>
 
     <script>
       const scriptURL =
